@@ -42,6 +42,7 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+Closure is accessing functions nested within other functions even when the parent function has been terminated and pulling information from higher scopes into the nested function.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -62,9 +63,9 @@ dansRoll();
 dansRoll();
 ```
 
-a. Where is closure used in this code? How can you tell?
-b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+a. Where is closure used in this code? How can you tell? the broader personalDice function holds and returns a nested unnamed function that performs a task. By invoking the parent function you are essentially invoking the nested function which will perform a roll each time it's called.
+b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change? Dan will always be logged but the number of the roll can change each time.
+c. What is the lexical scope of `newRoll`?  newRoll belongs to the unnamed function nested within personalDice. That is to say, if you attempted to reference newRoll before your return statement which establishes the unnamed function, you would throw an error because the parent function does not have access to it.
 
 ### Task 2c - Exit Ticket
 
